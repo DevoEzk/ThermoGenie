@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konversi Suhu by Devo Ezekiel Fransen</title>
+    <link rel="shortcut icon" href="static\thermogenie.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main" id="main">
+        <div class="box" id="box">
+            <div class="title">
+                <div class="image">
+                    <img src="static\hot.png">
+                </div>
+
+                <div class="head">
+                    
+                    <div class="head1">
+                        <img src="static\thermogenie.png">
+                        <h1 style="color: rgb(133,3,135); font-family:cursive;">Thermo<span style="color: #0a7fa6;">Genie</span></h1>
+                    </div>
+                    <div class="head2">
+                        <p style="font-size: 15px;">Program Konversi Suhu</p>
+                    </div>
+                    <form action="/konversi" method="post">
+                </div>
+
+                <div class="image">
+                    <img src="static/temperature.png">
+                </div>
+            </div>
+
+            <div class="menu">
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleDarkMode()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="desc">
+                <div class="desc2">
+                    <p>Program ini dirancang untuk memudahkan pengguna dalam mengonversi suhu antara berbagai satuan, seperti Celcius, Fahrenheit, Kelvin, dan Reamur.
+                    </p>
+                </div>
+            </div>
+            <div class="convert">
+
+                <div class="choice">
+                    <input type="number" placeholder="Masukkan suhu tanpa satuan disini!" id="suhu" name="suhu" step="any">
+                </div>
+
+                <div class="input_temp">
+                    <div class="inp">
+                        <label for="satuan">Bentuk Suhu Awal:</label>
+                        <select id="satuan" name="satuan">
+                            <option value="Celcius">Celcius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Reamur">Reamur</option>
+                            <option value="Kelvin">Kelvin</option>
+                        </select>
+                        
+                    </div>
+                    <div class="inp2">
+                        <label for="satuan2">Konversi ke Bentuk suhu:</label>
+                        <select id="satuan2" name="satuan2">
+                            <option value="Celcius">Celcius</option>
+                            <option value="Fahrenheit">Fahrenheit</option>
+                            <option value="Reamur">Reamur</option>
+                            <option value="Kelvin">Kelvin</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Konversi">
+                </div>
+            </form>
+            
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode(){
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

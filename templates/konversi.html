@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Konversi by Devo Ezekiel Fransen</title>
+    <link rel="shortcut icon" href="static\thermogenie.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="title2">
+                <div class="image">
+                    <img src="static\hot.png">
+                </div>
+    
+                <div class="title3">
+                    <img src="static\thermogenie.png">
+                    <h2> <span class="span1">Thermo</span><span class="span2">Genie</span></h2>
+                </div>
+    
+                <div class="image">
+                    <img src="static\temperature.png">
+                </div>
+            </div>
+
+            <div class="menu">
+                <label class="switch">
+                    <input type="checkbox" onclick="toggleDarkMode()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="result">
+                <p>Hasil Konversi: <span style="color: rgb(1, 110, 253);">{{ suhu }}{{derajat}} {{ satuan }} sama dengan {{ hasil }} {{ satuan_hasil }}</span></p>
+            </div>
+            
+            <a href="{{ url_for('index') }}">Kembali ke halaman awal</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode(){
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
