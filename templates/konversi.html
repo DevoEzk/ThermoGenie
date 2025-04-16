@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasil Konversi by Devo Ezekiel Fransen</title>
     <link rel="shortcut icon" href="static\thermogenie.png" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -8,18 +9,25 @@
 <body>
     <div class="main">
         <div class="box">
-            <div class="title2">
+            <div class="title">
                 <div class="image">
                     <img src="static\hot.png">
                 </div>
-    
-                <div class="title3">
-                    <img src="static\thermogenie.png">
-                    <h2> <span class="span1">Thermo</span><span class="span2">Genie</span></h2>
+
+                <div class="head">
+                    
+                    <div class="head1">
+                        <img src="static\thermogenie.png">
+                        <h1 style="color: rgb(133,3,135); font-family:cursive;">Thermo<span style="color: #0a7fa6;">Genie</span></h1>
+                    </div>
+                    <div class="head2">
+                        <p style="font-size: 15px;">Program Konversi Suhu</p>
+                    </div>
+                    <form action="/konversi" method="post">
                 </div>
-    
+
                 <div class="image">
-                    <img src="static\temperature.png">
+                    <img src="static/temperature.png">
                 </div>
             </div>
 
@@ -31,10 +39,33 @@
             </div>
 
             <div class="result">
-                <p>Hasil Konversi: <span style="color: rgb(1, 110, 253);">{{ suhu }}{{derajat}} {{ satuan }} sama dengan {{ hasil }} {{ satuan_hasil }}</span></p>
+                <p id="result">Hasil Konversi: <span style="color: rgb(1, 110, 253);">{{ suhu }}{{derajat}} {{ satuan }} sama dengan {{ hasil }} {{ satuan_hasil }}</span></p>
+            </div>
+            <div class="educate">
+                <p id="result">Rumus Konversi: <span style="color: rgb(1, 110, 253);">{{ rumus }}</span></p>
+            </div>
+            <div class="template">
+                <p id="result">Kategori Suhu: <span style="color: rgb(1, 110, 253);">{{ kategori }}</span></p>
             </div>
             
-            <a href="{{ url_for('index') }}">Kembali ke halaman awal</a>
+            <div class="back">
+                <a href="{{ url_for('index') }}">Kembali ke halaman awal</a>
+            </div>
+
+            <div class="footer">
+                <div class="project">
+                    <h5 style="font-weight: 500;">Made by: </h5>
+                </div>
+                <div class="name">
+                    <h6 style="font-weight: bold;">Devo Ezekiel Fransen</h6>
+                </div>
+                <div class="description">
+                    <div class="description2">
+                        <p>Program ini dirancang untuk memudahkan pengguna dalam mengonversi suhu antara berbagai satuan, seperti Celcius, Fahrenheit, Kelvin, dan Reamur.</p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </div>
 
